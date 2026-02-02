@@ -15,9 +15,9 @@ export default function Welcome() {
       </View>
       <Text>
         Your Body Battery value at wake-up today was 83, higher than your
-        baseline of 46 over the last seven days. You've had a high Body Battery
-        value upon waking up for 7 out of the past 7 days. Keep focusing on
-        healthy habits to continue supporting your energy levels.
+        baseline of 46 over the last seven days. You have had a high Body
+        Battery value upon waking up for 7 out of the past 7 days. Keep focusing
+        on healthy habits to continue supporting your energy levels.
         <Text style={{ color: "dodgerblue" }}>
           View your 7-day Body Battery
         </Text>
