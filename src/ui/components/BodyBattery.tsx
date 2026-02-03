@@ -1,3 +1,4 @@
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { Image, StyleSheet, Text, View } from "react-native";
 
 export default function BodyBattery() {
@@ -34,6 +35,9 @@ export default function BodyBattery() {
           style={styles.graph}
           source={require("../../../assets/images/graph.png")}
         />
+      </View>
+      <View style={styles.ellipsis}>
+        <Ionicons name="ellipsis-horizontal-sharp" size={24} color="black" />
       </View>
     </View>
   );
@@ -94,5 +98,10 @@ const styles = StyleSheet.create({
     marginTop: 20,
     height: 200,
     width: 385,
+  },
+  ellipsis: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: 5,
   },
 });
