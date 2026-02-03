@@ -7,22 +7,23 @@ export default function BodyBattery() {
         <Text style={styles.title}>In Focus</Text>
       </View>
       <View style={styles.card}>
-        <View style={styles.heading}>
+        <View style={styles.headerRow}>
           <Image
             style={styles.batteryIcon}
             source={require("../../../assets/images/batteryicon.png")}
           />
           <Text style={styles.subtitle}>Body Battery</Text>
+        </View>
 
-          <View>
-            <Text style={styles.mainScore}>51</Text>
-          </View>
+        <View style={styles.subheaderRow}>
+          <Text style={styles.mainScore}>51</Text>
 
           <View style={styles.scores}>
             <View style={styles.charged}>
               <Text style={styles.scoresNum}>+63</Text>
               <Text style={styles.scoresText}>Charged</Text>
             </View>
+
             <View style={styles.charged}>
               <Text style={styles.scoresNum}>-32</Text>
               <Text style={styles.scoresText}>Drained</Text>
@@ -39,23 +40,48 @@ export default function BodyBattery() {
 }
 
 const styles = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    padding: 5,
+    marginBottom: 8,
+  },
+  card: {
+    backgroundColor: "#FFFFFF",
+    width: 395,
+    height: 350,
+    borderRadius: 15,
+    padding: 10,
+  },
+  headerRow: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  batteryIcon: {
+    width: 45,
+    height: 45,
+  },
   subtitle: {
     marginTop: 15,
     marginLeft: 5,
     fontSize: 15,
   },
+  subheaderRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+  },
   mainScore: {
     fontSize: 35,
-  },
-  charged: {
-    flexDirection: "column",
-    justifyContent: "center",
+    padding: 10,
   },
   scores: {
-    marginTop: 50,
     flexDirection: "row",
-    flex: 1,
-    justifyContent: "space-around",
+    marginLeft: 120,
+    marginTop: 15,
+    gap: 40,
+  },
+  charged: {
+    alignItems: "center",
   },
   scoresNum: {
     fontSize: 20,
@@ -64,29 +90,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#ABABAB",
   },
-  heading: {
-    flexDirection: "row",
-    justifyContent: "flex-start",
-  },
-  card: {
-    backgroundColor: "#FFFFFF",
-    width: 395,
-    height: 355,
-    borderRadius: 15,
-    padding: 10,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    padding: 5,
-    marginBottom: 8,
-  },
-  batteryIcon: {
-    width: 45,
-    height: 45,
-  },
   graph: {
-    marginTop: 15,
+    marginTop: 20,
     height: 200,
     width: 385,
   },
