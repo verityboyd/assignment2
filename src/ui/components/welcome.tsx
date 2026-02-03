@@ -7,17 +7,31 @@ export default function Welcome() {
     <View style={styles.card}>
       <Text style={styles.title}>Good afternoon, Aurora</Text>
       <View style={styles.container}>
-        <Ionicons name="sparkles-sharp" size={15} color="gold" />
-        <Text>Active Intelligence</Text>
-        <Text style={styles.beta}>BETA</Text>
-        <Feather name="thumbs-down" size={15} color="black" />
-        <Feather name="thumbs-up" size={15} color="black" />
+        <View style={styles.leftSection}>
+          <Ionicons name="sparkles-sharp" size={18} color="gold" />
+          <Text style={styles.text}>Active Intelligence</Text>
+          <Text style={styles.betaText}>BETA</Text>
+        </View>
+        <View style={styles.thumbs}>
+          <Feather
+            name="thumbs-up"
+            size={14}
+            color="black"
+            style={[styles.icon, styles.thumbUp]}
+          />
+          <Feather
+            name="thumbs-down"
+            size={14}
+            color="black"
+            style={[styles.icon, styles.thumbDown]}
+          />
+        </View>
       </View>
       <Text>
         Your Body Battery value at wake-up today was 83, higher than your
-        baseline of 46 over the last seven days. You've had a high Body Battery
-        value upon waking up for 7 out of the past 7 days. Keep focusing on
-        healthy habits to continue supporting your energy levels.
+        baseline of 46 over the last seven days. You&apos;ve had a high Body
+        Battery value upon waking up for 7 out of the past 7 days. Keep focusing
+        on healthy habits to continue supporting your energy levels.
         <Text style={{ color: "dodgerblue" }}>
           View your 7-day Body Battery
         </Text>
@@ -29,7 +43,7 @@ export default function Welcome() {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "lightgrey",
+    backgroundColor: "#F6F6F6",
     width: 350,
     height: 300,
     padding: 10,
@@ -41,9 +55,40 @@ const styles = StyleSheet.create({
   },
   container: {
     flexDirection: "row",
-    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-  beta: {
-    backgroundColor: "darkgray",
+  leftSection: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  thumbs: {
+    width: 30,
+    height: 30,
+    position: "relative",
+  },
+  icon: {
+    position: "absolute",
+  },
+  thumbUp: {
+    top: 0,
+    right: 7,
+    zIndex: 2,
+    backgroundColor: "#F6F6F6",
+  },
+  thumbDown: {
+    top: 7,
+    right: 0,
+    zIndex: 1,
+  },
+  betaText: {
+    backgroundColor: "#E3E3E3",
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+    marginLeft: 8,
+  },
+  text: {
+    marginRight: 5,
   },
 });
