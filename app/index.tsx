@@ -1,3 +1,5 @@
+
+import Welcome from "@/src/ui/components/welcome";
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ActionBar from "../src/ui/components/ActionBar/ActionBar";
@@ -16,5 +18,17 @@ export default function Index() {
         <NavBar />
       </SafeAreaView>
     </View>
+    
+    <SafeAreaView style={{ flex: 1 }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Welcome />
+      </View>
+    </SafeAreaView>
   );
 }
