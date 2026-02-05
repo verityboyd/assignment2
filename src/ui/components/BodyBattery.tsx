@@ -49,13 +49,16 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     padding: 5,
     marginBottom: 8,
+    marginLeft: 10,
   },
   card: {
     backgroundColor: "#FFFFFF",
     width: 395,
     height: 350,
     borderRadius: 15,
-    padding: 10,
+    padding: 5,
+    marginLeft: 10,
+    marginRight: 10,
   },
   headerRow: {
     flexDirection: "row",

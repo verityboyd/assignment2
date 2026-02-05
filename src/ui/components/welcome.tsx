@@ -44,7 +44,7 @@ export default function Welcome() {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: "#E2E5E7",
-    width: 400,
+    width: 412,
     padding: 20,
   },
   title: {
