@@ -4,6 +4,8 @@ import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ActionBar from "../src/ui/components/ActionBar/ActionBar";
 import NavBar from "../src/ui/components/NavBar/NavBar";
+import BodyBattery from "@/src/ui/components/BodyBattery";
+import { View } from "react-native";
 
 export default function Index() {
   return (
@@ -29,6 +31,14 @@ export default function Index() {
       >
         <Welcome />
       </View>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <BodyBattery />
     </SafeAreaView>
   );
 }
